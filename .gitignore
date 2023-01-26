@@ -2,6 +2,7 @@ HotpotAdv/__pycache__/
 HotpotAdv/misc/
 HotpotAdv/misc_old/
 HotpotAdv/log/
+HotpotAdv/human_eval/
 Fever/misc/
 Fever/log/
 Fever/other_data/
