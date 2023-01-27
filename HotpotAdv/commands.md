@@ -13,6 +13,9 @@ nohup python verifying_questions.py --train_slice 0 --show_result --consistency_
 <!-- 3. FIND RELEVANT CONTEXT -->
 nohup python relevant_context.py --show_result --wikipedia > log/relevant_context_wikipedia_log 2>&1 &
 
+To use other systems, try options: --DPR --drqa --google, or leave no options for using the dataset
+To use google, make sure you run google.py first.
+
 <!-- 4. GENERATE VERIFYING ANSWERS -->
 nohup python verifying_answers.py --train_slice 0 --show_result --wikipedia > log/verifying_answers_log 2>&1 &
 

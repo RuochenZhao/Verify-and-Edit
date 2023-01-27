@@ -52,7 +52,7 @@ def result_cache_name(args):
         args.train_slice, args.train_slice + args.num_shot, args.dev_slice, args.num_dev,
         args.num_distractor, args.style)
 
-def consistency(answers, rationales, predictions, prompt_tokens, model):
+def consistency(answers, rationales, predictions, prompt_tokens):
     answer_probs = {}
     answer_prob_lists = {}
     choices = predictions['choices']
@@ -60,15 +60,15 @@ def consistency(answers, rationales, predictions, prompt_tokens, model):
         logprobs = np.array(choices[i]['logprobs']['token_logprobs'][prompt_tokens:])
         prob = np.exp(np.mean(logprobs))
         if ans in answer_probs.keys():
-            answer_prob_lists[ans].append((i, prob))
-            answer_probs[ans] += 1
+            answer_probs[ans] += prob
+            answer_prob_lists[ans] += [(i, prob)]
         else:
+            answer_probs[ans] = prob
             answer_prob_lists[ans] = [(i, prob)]
-            answer_probs[ans] = 1
-    consistency = max(list(answer_probs.values()))/5
+    consistency = max(list(answer_probs.values()))
     final_aggregated_answer = sorted(answer_probs.items(), key=lambda item: item[1], reverse=True)[0][0]
-    prob_list = answer_prob_lists[final_aggregated_answer]
-    best_i = prob_list[np.argmax([a[1] for a in prob_list])][0]
+    probs = [a[1] for a in answer_prob_lists[final_aggregated_answer]]
+    best_i = np.argmax(probs)
     final_aggregated_rationale = rationales[best_i]
     return consistency, final_aggregated_answer, final_aggregated_rationale, best_i
 

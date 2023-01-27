@@ -13,6 +13,9 @@ CUDA_VISIBLE_DEVICES=1 nohup python verifying_questions.py --train_slice 0 --sho
 <!-- 3. FIND RELEVANT CONTEXT -->
 CUDA_VISIBLE_DEVICES=3 nohup python relevant_context.py --train_slice 0 --show_result --retrieval wikipedia  --num_dev 3000 --plot_numbers --check_inclusion --use_sampled > log/sampled_davinci3_relevant_context_wikipedia_log 2>&1 &
 
+To use other methods, use --retrieval from options ['DPR', 'wikipedia', 'drqa', 'google']
+Google must be used after running google.py
+
 <!-- 4. GENERATE VERIFYING ANSWERS -->
 CUDA_VISIBLE_DEVICES=3 nohup python verifying_answers.py --train_slice 0 --show_result --num_dev 3000 --retrieval wikipedia --use_sampled > log/sampled_davinci3_verifying_answers_wikipedia_log 2>&1 &
 
