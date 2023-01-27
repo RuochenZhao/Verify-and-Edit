@@ -1,0 +1,12 @@
+{"id": 180017, "verifiable": "VERIFIABLE", "label": "REFUTES", "claim": "Reg Watson is a current television producer.", "evidence": [[[208963, 216896, "Reg_Watson", 0]]]}
+{"id": 39149, "verifiable": "NOT VERIFIABLE", "label": "NOT ENOUGH INFO", "claim": "The Gadsden flag was named by Christopher Gadsden.", "evidence": [[[113289, null, null, null], [119539, null, null, null], [310106, null, null, null], [310108, null, null, null]]]}
+{"id": 126412, "verifiable": "VERIFIABLE", "label": "SUPPORTS", "claim": "Black Mirror is about society.", "evidence": [[[148254, 163258, "Black_Mirror", 0]]]}
+{"id": 52968, "verifiable": "NOT VERIFIABLE", "label": "NOT ENOUGH INFO", "claim": "Shahid Kapoor has acted professionally.", "evidence": [[[69254, null, null, null]]]}
+{"id": 215766, "verifiable": "NOT VERIFIABLE", "label": "NOT ENOUGH INFO", "claim": "Sierra Leone's first Bishop  was Sir Milton Margai.", "evidence": [[[256344, null, null, null]]]}
+{"id": 873, "verifiable": "VERIFIABLE", "label": "SUPPORTS", "claim": "True Detective's second season was set in the most populous state of the United States.", "evidence": [[[16385, 20314, "True_Detective", 6], [16385, 20314, "California", 0]]]}
+{"id": 198767, "verifiable": "NOT VERIFIABLE", "label": "NOT ENOUGH INFO", "claim": "License to Drive features an American actor and singer born in 1971 in a lead role.", "evidence": [[[233693, null, null, null]]]}
+{"id": 217630, "verifiable": "VERIFIABLE", "label": "SUPPORTS", "claim": "Love Aaj Kal is directed by Imtiaz Ali.", "evidence": [[[258649, 257417, "Love_Aaj_Kal", 1], [258649, 257417, "Imtiaz_Ali_-LRB-director-RRB-", 5]]]}
+{"id": 200631, "verifiable": "VERIFIABLE", "label": "REFUTES", "claim": "Geoffrey Beevers has yet to have any affiliation with the Orange Tree Theatre.", "evidence": [[[236004, 238574, "Geoffrey_Beevers", 3]]]}
+{"id": 205382, "verifiable": "VERIFIABLE", "label": "SUPPORTS", "claim": "Google Home's design received feedback.", "evidence": [[[242730, 244045, "Google_Home", 13]]]}
+{"id": 126517, "verifiable": "NOT VERIFIABLE", "label": "NOT ENOUGH INFO", "claim": "Steve Buscemi was incapable of being in the movie Lonesome Jim.", "evidence": [[[148355, null, null, null]]]}
+{"id": 187142, "verifiable": "VERIFIABLE", "label": "SUPPORTS", "claim": "Heartland is a canadian TV series.", "evidence": [[[218341, 224658, "Heartland_-LRB-Canadian_TV_series-RRB-", 0]]]}
