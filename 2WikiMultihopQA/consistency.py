@@ -55,15 +55,15 @@ def consistency(answers, rationales, predictions, prompt_tokens):
         logprobs = np.array(choices[i]['logprobs']['token_logprobs'][prompt_tokens:])
         prob = np.exp(np.mean(logprobs))
         if ans in answer_probs.keys():
-            answer_probs[ans] += prob
-            answer_prob_lists[ans] += [(i, prob)]
+            answer_prob_lists[ans].append((i, prob))
+            answer_probs[ans] += 1
         else:
-            answer_probs[ans] = prob
             answer_prob_lists[ans] = [(i, prob)]
-    consistency = max(list(answer_probs.values()))
+            answer_probs[ans] = 1
+    consistency = max(list(answer_probs.values()))/5
     final_aggregated_answer = sorted(answer_probs.items(), key=lambda item: item[1], reverse=True)[0][0]
-    probs = [a[1] for a in answer_prob_lists[final_aggregated_answer]]
-    best_i = np.argmax(probs)
+    prob_list = answer_prob_lists[final_aggregated_answer]
+    best_i = prob_list[np.argmax([a[1] for a in prob_list])][0]
     final_aggregated_rationale = rationales[best_i]
     return consistency, final_aggregated_answer, final_aggregated_rationale, best_i
 
